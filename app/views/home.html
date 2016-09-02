@@ -14,3 +14,44 @@
   </div>
 </div>
 
+<div class="search-results">
+  <div class="container">
+
+    <h2>Search Results</h2>
+    <p>Amount of results: {{repos.total_count | number}}</p>
+    <div class="row">
+      
+      <div class="item col-md-4" ng-repeat="repo in repos.items">
+        <p class="github-url">GitHub URL: {{ repo.html_url }}</p>
+        <p class="description">Description: {{ repo.description }}</p>
+        <p class="forks-count">Fork Count {{ repo.forks_count }}</p>
+        <p class="stargazers-count">Stargazers_count {{ repo.stargazers_count }}</p>
+        <p class="open-issues-count">Open issues_count: {{ repo.open_issues_count }}</p>
+        <p class="watchers">Watchers: {{ repo.watchers_count }}</p>
+        <p class="score">Score: {{ repo.score }}</p>
+        <p class="score">Main language: {{ repo.language }}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="search-results">
+  <div class="container">
+
+    <h2>Open Issues</h2>
+    <p>Amount of results: {{openIssues.total_count | number}}</p>
+    <div class="row">
+      
+      <div class="item col-md-4" ng-repeat="openIssue in openIssues.items">
+        <p class="issue-url">GitHub URL: {{ openIssue.url }}</p>
+        <p class="issue-title">Issue Title: {{ openIssue.title }}</p>
+        <p class="issue-body">Description: {{ openIssue.body }}</p>
+        <p class="issue-state">State: {{ openIssue.forks_count }}</p>
+        <p class="issue-created">Created at: {{ openIssue.created_at | date }}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
