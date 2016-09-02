@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/app'));
 
 // set the home page route
 app.get('/', function(request, response) {
-  // make sure index is in the right directory. 
+  // Make sure index is in the right directory. 
   //In this case /app/index.html
   response.render('app/index');
 });
