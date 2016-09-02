@@ -1,1 +1,1 @@
-var app = angular.module("repoSearchApp", []);
+var app = angular.module("RepoSearchApp", []);
