@@ -13,34 +13,32 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap: Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
+    <!-- Bootstrap: Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- AngularJS api -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!-- Include the core AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <!-- Include the AngularJS routing library -->
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
 
   </head>
 
-  <body ng-app="repoSearchApp">
+  <body ng-app="RepoSearchApp">
     
     <div class="header">
       <div class="container">
-        <h1>Header</h1>
+        <a href="/#/">
+          <h1>Header</h1>
+          <img src="img/logo.svg" width="80" height="80"> &#12501; &#65387; &#12488; &#12501; &#65387; &#12488;
+        </a>
       </div>
     </div>
 
-    <div class="main" ng-controller="MainController">
-      <div class="container">
-
-        <h1>{{ title }}</h1>
-        <h2>sub body</h2>
-        <p>Paragraph</p>       
-
-      </div>
-    </div>
+    <div ng-view></div>
 
     <div class="footer">
       <div class="container">
@@ -53,11 +51,13 @@
     <script src="assets/js/app.js"></script>
 
     <!-- Controllers -->
-    <script src="assets/js/controllers/MainController.js"></script>
+    <script src="assets/js/controllers/HomeController.js"></script>
+    <script src="assets/js/controllers/PhotoController.js"></script>
 
     <!-- Directives -->
 
     <!-- Services -->
+    <script src="assets/js/services/photos.js"></script>
 
   </body>
 </html>
